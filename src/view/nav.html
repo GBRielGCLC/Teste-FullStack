@@ -1,0 +1,68 @@
+<!-------------------------------------------------------------------------------------- Booststrap -------------------------------------------------------------------------------------->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Pesquisar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="search_IngredientePorNome.php"> Ingrediente por nome </a></li>
+                        <li><a class="dropdown-item" href="#"> Por ingrediente </a></li>
+                        <li><a class="dropdown-item" href="lookup_cocktailId.php"> Detalhes do coquetel por ID </a></li>
+                        <li><a class="dropdown-item" href="lookup_ingredienteId.php"> Ingrediente por ID </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Aleatório
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="get_10random.php"> 10 coquetéis aleatórios </a></li>
+                        <li><a class="dropdown-item" href="get_random.php"> Coquetel aleatório </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filtrar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <!--<li><a class="dropdown-item" href="#"> Por multi-ingredientes </a></li>-->
+                        <li><a class="dropdown-item" href="filter_copo.php"> Por copo </a></li>
+                        <li><a class="dropdown-item" href="filter_alcool.php"> Por álcool </a></li>
+                        <li><a class="dropdown-item" href="filter_categoria.php"> Por categoria </a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Listar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="get_latest.php"> Mais recentes </a></li>
+                        <li><a class="dropdown-item" href="get_popular.php"> Mais populares </a></li>
+                        <li><a class="dropdown-item" href="get_categories.php"> Categorias </a></li>
+                        <li><a class="dropdown-item" href="get_copos.php"> Copos </a></li>
+                        <li><a class="dropdown-item" href="get_filters.php"> Filtros alcoólicos </a></li>
+                        <li><a class="dropdown-item" href="get_ingredientes"> Ingredientes </a></li>
+                    </ul>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
