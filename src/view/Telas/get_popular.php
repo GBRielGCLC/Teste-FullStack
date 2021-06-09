@@ -33,43 +33,9 @@ curl_close($curl);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Listar populares </title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<style>
-	body{
-            text-align: center;
-        }
-        table{
-			margin-top:40px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
-            border: 1px solid #adadad;
-            border-spacing: 1px;
-        }
-        th{
-            text-align: left;
-            background-color: #4caf50;
-            color: white;
-        }
-        th, td{
-            padding: 5px;
-        }
 
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(odd){
-            background-color: white;
-        }
-
-        tr:hover{
-            background-color: #d1cccc;
-        }
-
-        img{
-            width:150px;
-        }
-</style>
 <body>
 
 <?php include("../nav.html");?>

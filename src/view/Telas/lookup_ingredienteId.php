@@ -4,28 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pesquisar ingrediente por id </title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-
-<style>
-    body{
-        height:100%;
-        width:100%;
-    }
-    form{
-        width:50%;
-        height: 50px;
-        margin-top:auto;
-        margin-bottom:auto;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    input{
-        width:70%;
-    }
-    button{
-        width:20%;
-    }
-</style>
 
 <body>
     <?php include("../nav.html");?>

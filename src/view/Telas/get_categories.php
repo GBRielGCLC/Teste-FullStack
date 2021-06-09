@@ -34,43 +34,15 @@ curl_close($curl);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Listar categorias </title>
+    <link rel="stylesheet" href="../style.css">
 </head>
+
 <style>
-	body{
-            text-align: center;
-        }
-        table{
-			margin-top:40px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
-            border: 1px solid #adadad;
-            border-spacing: 1px;
-        }
-        th{
-            text-align: left;
-            background-color: #4caf50;
-            color: white;
-        }
-        td{
-            text-align: left;
-        }
-
-        th, td{
-            padding: 5px;
-        }
-
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(odd){
-            background-color: white;
-        }
-
-        tr:hover{
-            background-color: #d1cccc;
-        }
+	table{
+		width:50%
+	}
 </style>
+
 <body>
 
 <?php include("../nav.html");?>

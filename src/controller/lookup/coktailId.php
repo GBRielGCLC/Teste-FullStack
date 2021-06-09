@@ -33,51 +33,15 @@ curl_close($curl);
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+    <title> Pesquisar coquetel por id </title>
+    <link rel="stylesheet" href="../../view/style.css">
+    
     <!-------------------------------------------------------------------------------------- Booststrap -------------------------------------------------------------------------------------->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </head>
-<style>
-	body{
-            text-align: center;
-        }
-        table{
-			margin-top:40px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
-            border: 1px solid #adadad;
-            border-spacing: 1px;
-        }
-        th{
-            background-color: #4caf50;
-            color: white;
-        }
-        th, td{
-            padding: 5px;
-        }
 
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(odd){
-            background-color: white;
-        }
-
-        tr:hover{
-            background-color: #d1cccc;
-        }
-
-        img{
-            width:150px;
-        }
-
-        a{
-            margin-top:50px;
-        }
-</style>
 <body>
 
 <table>
@@ -92,22 +56,30 @@ curl_close($curl);
 	<Tbody>
 		
         <?php
-        if ($err) {
-            echo "cURL Error #:" . $err;
-        } else {
-            foreach ($resultado->drinks as $drink) {
-                echo "
-                <tr>
-                    <td style='text-align:center;'>$drink->idDrink</td>
-                    <td style='text-align:center; width:160px;'> <img src='$drink->strDrinkThumb' alt='Foto não carregada'> </td>
-                    <td>$drink->strDrink</td>
-                    <td>$drink->strGlass</td>
-                    <td>$drink->strAlcoholic</td>
-                    <td>$drink->strInstructions</td>
+            if(isset($resultado)){
+                if ($err) {
+                    echo "cURL Error #:" . $err;
+                } else {
+                    foreach ($resultado->drinks as $drink) {
+                        echo "
+                        <tr>
+                            <td style='text-align:center;'>$drink->idDrink</td>
+                            <td style='text-align:center; width:160px;'> <img src='$drink->strDrinkThumb' alt='Foto não carregada'> </td>
+                            <td>$drink->strDrink</td>
+                            <td>$drink->strGlass</td>
+                            <td>$drink->strAlcoholic</td>
+                            <td>$drink->strInstructions</td>
+                        </tr>
+                        ";
+                    }
+                }
+            }
+            else{
+                echo "<tr>
+                <td colspan='6'> Não há bebidas com esse filtro </td>
                 </tr>
                 ";
             }
-        }
         ?>
 	</Tbody>
 </table>
