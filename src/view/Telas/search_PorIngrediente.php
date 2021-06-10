@@ -11,7 +11,7 @@
     <?php include("../nav.html");?>
     
 
-    <form action="..\..\controller\pesquisar\porIngrediente.php" method="POST">
+    <form action="search-porIngrediente.php" method="POST">
         <input type="text" name="nome">
         <button type="submit" class="btn btn-outline-success">Pesquisar</button>
 

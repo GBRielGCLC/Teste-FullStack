@@ -41,7 +41,7 @@ curl_close($curl);
     <?php include("../nav.html");?>
     
 
-    <form action="..\..\controller\filter\copo.php" method="POST">
+    <form action="filter-copo.php" method="POST">
         <select class="form-control" id="exampleFormControlSelect1" name="copo">
             <option hidden selected > Selecione </option>
             <?php

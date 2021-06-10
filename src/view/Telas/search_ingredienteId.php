@@ -11,7 +11,7 @@
     <?php include("../nav.html");?>
     
 
-    <form action="..\..\controller\lookup\ingredienteId.php" method="POST">
+    <form action="search-ingredienteId.php" method="POST">
         <input type="number" name="id">
         <button type="submit" class="btn btn-outline-success">Pesquisar</button>
 

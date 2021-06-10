@@ -41,7 +41,7 @@ curl_close($curl);
     <?php include("../nav.html");?>
     
 
-    <form action="..\..\controller\filter\categoria.php" method="POST">
+    <form action="filter-categoria.php" method="POST">
         <select class="form-control" id="exampleFormControlSelect1" name="categorias">
             <option hidden selected> Selecione </option>
             <?php

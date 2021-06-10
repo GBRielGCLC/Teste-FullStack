@@ -36,12 +36,12 @@ curl_close($curl);
     <title> Filtrar por álcool </title>
     <link rel="stylesheet" href="../style.css">
 </head>
-
+ 
 <body>
     <?php include("../nav.html");?>
     
 
-    <form action="..\..\controller\filter\alcool.php" method="POST">
+    <form action="filter-alcool.php" method="POST">
         <select class="form-control" id="exampleFormControlSelect1" name="alcool">
             <option hidden selected> Selecione </option>
             <?php
@@ -56,6 +56,7 @@ curl_close($curl);
             }
             ?>
         </select>
+
         <button type="submit" class="btn btn-outline-success">Filtrar</button>
 
     </form>

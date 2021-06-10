@@ -1,11 +1,11 @@
 <?php
-$alcool = $_POST["alcool"];
+$categoria = $_POST["categorias"];
 
 $curl = curl_init();
 
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://the-cocktail-db.p.rapidapi.com/filter.php?a=$alcool",
+	CURLOPT_URL => "https://the-cocktail-db.p.rapidapi.com/filter.php?c=$categoria",
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_FOLLOWLOCATION => true,
 	CURLOPT_ENCODING => "",
@@ -33,16 +33,14 @@ curl_close($curl);
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Filtrar por álcool </title>
+	<title> Filtrar por categoria </title>
     <link rel="stylesheet" href="../../view/style.css">
-<!-------------------------------------------------------------------------------------- Booststrap -------------------------------------------------------------------------------------->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 </head>
 
+<?php include("../nav.html");?>
+
 <body>
-<a class="btn btn-outline-danger" href="../../view/Telas/filter_alcool.php"> Filtrar novamente </a>
+<a class="btn btn-outline-danger" href="filter_categoria.php"> Filtrar novamente </a>
 <table>
 	<thead>
 		<th> Id </th>
@@ -63,7 +61,7 @@ curl_close($curl);
                         <td style='text-align:center;'>$drink->idDrink</td>
                         <td style='text-align:center; width:160px;'> <img src='$drink->strDrinkThumb' alt='Foto não carregada'> </td>
                         <td>$drink->strDrink</td>
-                        <td>$alcool</td>
+                        <td>$categoria</td>
                     </tr>
                     ";
                 }
